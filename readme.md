@@ -1,17 +1,12 @@
-Выдать разрешения для приложений в google console для  sheets, drive, forms
-Необходимо выпустить oAuth token 
-положить токен и указать путь до него
-EXCEL_DOCUMENT_ID - указать id google документа с вопросами (https://docs.google.com/spreadsheets/d/1tsao56_qbI7vCwNyJRivKXpcSwtCpTTRD4zjjPeCRqU/edit#gid=0)
-ID можно узнать из url документа, лучше выставить доступность документа по ссылке или дать права на чтение данного документа аккаунту из под которого выполняется скрипт
+## Переменные окружения:
+* PATH_TOKEN='/tmp/token.json'- путь где будет хрнаиться информация о токене
+* PATH_TO_SECRETS='/tmp/secrets.json' - сгенерированные секреты oAuth google 
+* SHEET_ID='some_id' - ID google sheet документа источника
 
+### Версия python 
+* python 3.10
+* Установка зависимостей pip install -r requirements/requirements.dev.txt
+* Установка зависимостей pip install -r requirements/requirements.txt
+## Запуск
 
-в консоли выводиться ссылка на форму с вопросами (отдаем кандидату)
-а так же ссылка на просмотр ответов по форме 
-
-
-после генерации формы, скрипт ожидает пользовательский ввод, после чего автоматически удаляет форму 
-
-python version: 3.10
-pip install -r requirements.txt
-запуск 
-python main.py
+* python -m interview.composites.interview

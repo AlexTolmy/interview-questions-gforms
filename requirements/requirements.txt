@@ -1,0 +1,9 @@
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib
+oauth2client
+openpyxl~=3.0.10
+classic-components ~=0.0.1
+click~=7.1.0
+pydantic~=1.9.1
+python-json-logger~=2.0.0
