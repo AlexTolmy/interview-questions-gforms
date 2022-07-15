@@ -28,7 +28,11 @@ class Forms(interfaces.StorageForm):
         ).execute()
         self._create_view_url(result['formId'])
         _id = result['formId']
-        return FromInfo(view_form_url=result['responderUri'], id=_id, response_url=self._create_view_url(_id))
+        return FromInfo(
+            view_form_url=result['responderUri'],
+            id=_id,
+            response_url=self._create_view_url(_id)
+        )
 
     def create_questions(self, _id: str, questions: List[Question]):
         self._resource.forms().batchUpdate(
@@ -161,7 +165,8 @@ class Sheet(interfaces.StorageSheet):
         for worksheet in wb.worksheets:
             questions = [
                 Question(text=line[0], image_url=line[1])
-                for line in worksheet.values if line[0]
+                for line in worksheet.values
+                if line[0]
             ][1:]
             themes.append(
                 Theme(**{

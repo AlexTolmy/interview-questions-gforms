@@ -1,7 +1,7 @@
 import datetime
 import logging
 import random
-from typing import List, Optional
+from typing import List
 
 from classic.components import component
 from pydantic import validate_arguments

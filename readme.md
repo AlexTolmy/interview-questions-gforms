@@ -1,3 +1,7 @@
+# Проект
+
+Проект для генерации google формы с вопросами из источника (google sheet)
+
 ## Переменные окружения:
 * PATH_TOKEN='/tmp/token.json'- путь где будет хрнаиться информация о токене
 * PATH_TO_SECRETS='/tmp/secrets.json' - сгенерированные секреты oAuth google 
